@@ -5,4 +5,4 @@ default:
 build_image:
   script:
     - docker build -t vladimirkovelv/docker-react -f Dockerfile.dev .
-    - docker run vladimirkovelv/docker-react npm run test -- --coverage
+    - docker run vladimirkovelv/docker-react -e CI=true npm run test 
